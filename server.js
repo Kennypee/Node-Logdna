@@ -26,7 +26,7 @@ app.get("/", function (request, response) {
 
 app.post('/api/log', (req, res) => {
 
-  log.log(req.body.log);
+  log.log(req.body.userData);
 
   res.json("Logs sent!");
 

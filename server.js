@@ -17,8 +17,19 @@ app.get("/", function (request, response) {
 });
 
 app.post('/loguser', (req, res) => {
-  log.log(req.body.userData);
-  res.json("User logged!");
+  if(req.body){
+    log.log("User Logged In Successfully!")
+    res.json("User logged!");
+  }
 });
 app.listen(8000);
 console.log('Serving on port 8000');
+
+/**
+ * 
+ *   if(req.body){
+    log.log("User Logged In Successfully!")
+  }else{
+    log.log("Login Failed!!");
+  }
+ */
